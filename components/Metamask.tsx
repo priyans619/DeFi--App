@@ -28,7 +28,14 @@ const ConnectMetaMask: React.FC = () => {
   return (
 
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      
+      {account ? (
+        <div>
+          <p className="text-green-500">Connected as {account}</p>
+          
+        </div>
+      ) : (
+        
+      )}
     </div>
     
   );
