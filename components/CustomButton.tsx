@@ -7,9 +7,14 @@ interface CustomButtonProps {
   styles?: string;
 }
 
-const CustomButton: React.FC<CustomButtonProps> = ({  }) => {
+const CustomButton: React.FC<CustomButtonProps> = ({ btnType, title, handleClick }) => {
   return (
-    
+    <button
+      type={btnType}
+      onClick={handleClick}
+    >
+      {title}
+    </button>
   );
 };
 
