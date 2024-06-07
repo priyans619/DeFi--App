@@ -29,10 +29,9 @@ const ConnectMetaMask: React.FC = () => {
   };
 
   return (
-
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex items-center">
       {account ? (
-        <div>
+        <div className="flex items-center space-x-4">
           <p className="text-green-500">Connected as {account}</p>
           <CustomButton
             btnType="button"
@@ -43,19 +42,18 @@ const ConnectMetaMask: React.FC = () => {
               setWeb3(null);
               setAccount(null);
             }}
-            styles="mt-4 bg-red-500"
+            styles="bg-red-500"
           />
         </div>
       ) : (
         <CustomButton
           btnType="button"
-          title="Connect Wallet"
+          title="Connect MetaMask"
           handleClick={connectWallet}
           styles="bg-blue-500"
         />
       )}
     </div>
-    
   );
 };
 
