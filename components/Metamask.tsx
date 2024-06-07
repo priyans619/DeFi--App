@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import Web3Modal from 'web3modal';
 import Web3 from 'web3';
