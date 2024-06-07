@@ -40,7 +40,7 @@ const ConnectMetaMask: React.FC = () => {
               setWeb3(null);
               setAccount(null);
             }}
-            
+            styles="mt-4 bg-red-500"
           />
         </div>
       ) : (
