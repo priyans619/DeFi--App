@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Web3Modal from 'web3modal';
 import Web3 from 'web3';
+import CustomButton from './CustomButton';
 
 
 const ConnectMetaMask: React.FC = () => {
@@ -44,7 +45,12 @@ const ConnectMetaMask: React.FC = () => {
           />
         </div>
       ) : (
-        
+        <CustomButton
+          btnType="button"
+          title="Connect Wallet"
+          handleClick={connectWallet}
+          styles="bg-blue-500"
+        />
       )}
     </div>
     
