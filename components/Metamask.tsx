@@ -31,7 +31,17 @@ const ConnectMetaMask: React.FC = () => {
       {account ? (
         <div>
           <p className="text-green-500">Connected as {account}</p>
-          
+          <CustomButton
+            btnType="button"
+            title="Disconnect"
+            handleClick={() => {
+              provider.close();
+              setProvider(null);
+              setWeb3(null);
+              setAccount(null);
+            }}
+            
+          />
         </div>
       ) : (
         
