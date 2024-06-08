@@ -120,19 +120,19 @@ const CryptoPriceChart: React.FC = () => {
         <div className="flex justify-center mb-4">
           <button
             onClick={() => setTimeframe('1')}
-            className={`px-4 py-2 mx-2 rounded ${timeframe === '1' ? 'bg-violet-500 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 mx-2 rounded ${timeframe === '1' ? 'bg-violet-800 text-white' : 'bg-gray-200 text-gray-700'}`}
           >
             1 Day
           </button>
           <button
             onClick={() => setTimeframe('7')}
-            className={`px-4 py-2 mx-2 rounded ${timeframe === '7' ? 'bg-violet-500 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 mx-2 rounded ${timeframe === '7' ? 'bg-violet-800 text-white' : 'bg-gray-200 text-gray-700'}`}
           >
             1 Week
           </button>
           <button
             onClick={() => setTimeframe('30')}
-            className={`px-4 py-2 mx-2 rounded ${timeframe === '30' ? 'bg-violet-500 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 mx-2 rounded ${timeframe === '30' ? 'bg-violet-800 text-white' : 'bg-gray-200 text-gray-700'}`}
           >
             1 Month
           </button>
