@@ -50,7 +50,7 @@ const ConnectMetaMask: React.FC = () => {
           btnType="button"
           title="Connect MetaMask"
           handleClick={connectWallet}
-          styles="bg-blue-500"
+          styles="bg-violet-800"
         />
       )}
     </div>
