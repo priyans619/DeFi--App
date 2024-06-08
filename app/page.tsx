@@ -6,7 +6,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex h-screen  flex-col items-center justify-center min-h-screen py-2">
+      <div className="flex h-screen bg-violet-100  flex-col items-center justify-center min-h-screen py-2">
         <CryptoPriceChart />
       </div>
     </div>
