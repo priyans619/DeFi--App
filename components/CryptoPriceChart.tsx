@@ -2,9 +2,30 @@
 
 import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
-
+import {
+  Chart as ChartJS,
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  Title,
+  Tooltip,
+  Legend,
+  ChartOptions,
+} from 'chart.js';
 import axios from 'axios';
 
+ChartJS.register(
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+type ChartOptionsType = ChartOptions<'line'>;
 
 const CryptoPriceChart: React.FC = () => {
   const [chartData, setChartData] = useState<any>({
@@ -12,6 +33,45 @@ const CryptoPriceChart: React.FC = () => {
     datasets: [],
   });
   const [timeframe, setTimeframe] = useState('30');
+
+  const options: ChartOptionsType = {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        beginAtZero: true,
+        ticks: {
+          autoSkip: true,
+          maxTicksLimit: 10,
+        },
+      },
+      y: {
+        beginAtZero: false,
+        ticks: {
+          callback: function (value: string | number): string {
+            return `$${Number(value).toFixed(2)}`;
+          },
+        },
+      },
+    },
+    elements: {
+      point: {
+        radius: 3,
+      },
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        callbacks: {
+          label: function (context: any) {
+            return `Price: $${context.raw.toFixed(2)}`;
+          },
+        },
+      },
+    },
+  };
 
   useEffect(() => {
     const fetchPriceData = async () => {
