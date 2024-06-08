@@ -117,6 +117,26 @@ const CryptoPriceChart: React.FC = () => {
     <div className="flex flex-col items-center min-h-screen bg-gray-100">
       <div className="w-full max-w-6xl mx-auto px-16 bg-white rounded-lg shadow-lg mt-4">
         <h2 className="text-2xl font-bold text-center mb-4 ">Bitcoin Price Chart</h2>
+        <div className="flex justify-center mb-4">
+          <button
+            onClick={() => setTimeframe('1')}
+            className={`px-4 py-2 mx-2 rounded ${timeframe === '1' ? 'bg-violet-500 text-white' : 'bg-gray-200 text-gray-700'}`}
+          >
+            1 Day
+          </button>
+          <button
+            onClick={() => setTimeframe('7')}
+            className={`px-4 py-2 mx-2 rounded ${timeframe === '7' ? 'bg-violet-500 text-white' : 'bg-gray-200 text-gray-700'}`}
+          >
+            1 Week
+          </button>
+          <button
+            onClick={() => setTimeframe('30')}
+            className={`px-4 py-2 mx-2 rounded ${timeframe === '30' ? 'bg-violet-500 text-white' : 'bg-gray-200 text-gray-700'}`}
+          >
+            1 Month
+          </button>
+        </div>
         <div className="relative h-96 ">
           <Line data={chartData} options={options} />
         </div>
