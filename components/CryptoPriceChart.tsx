@@ -55,7 +55,12 @@ const CryptoPriceChart: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-gray-100">
-      
+      <div className="w-full max-w-6xl mx-auto px-16 bg-white rounded-lg shadow-lg mt-4">
+        <h2 className="text-2xl font-bold text-center mb-4 ">Bitcoin Price Chart</h2>
+        <div className="relative h-96 ">
+          <Line data={chartData} options={options} />
+        </div>
+      </div>
     </div>
   );
 };
