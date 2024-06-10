@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DeFi- App
 
-## Getting Started
+## Technologies
+1.**Next.Js** (Frontend UI)
 
-First, run the development server:
+2.**API**'s:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   a) Use ***0x-swap*** (DeFi Exchange) for fetching all blockchain networks.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3.**Libraries**:
+    
+   a) **UI kit**- **TailwindCss**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   
+## Functionalities
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Connect Wallet** - Can connect to metamask wallet.
 
-## Learn More
+2. **Bitcoin Price** - Find last 30 days bitcoin price change.
 
-To learn more about Next.js, take a look at the following resources:
+3. **Token Swap** - Use Ox api for token swapping
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## System Requirements
 
-## Deploy on Vercel
+To get started with development, you need to install few tools
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **git** 
+   
+   `git` version 2.40.0 or higher. Download [git](https://git-scm.com/downloads) if you don't have it already.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   To check your version of git, run:
+
+   ```shell
+    git --version
+   ```
+2. **node** 
+
+   `node` version 16.15.1 or higher. Download [node](https://nodejs.org/en/download/) if you don't have it already.
+
+    To check your version of node, run:
+
+    ```shell
+    node --version
+    ```
+
+3. **npm**
+  
+    `npm` version 9.5.0 or higher. You will have it after you install node.
+
+    To check your version of npm, run:
+
+     ```shell
+     npm --version
+     ```
+
+## Setup
+To set up a development environment, please follow these steps:
+
+1. Clone the repo
+
+   ```shell
+    git clone https://github.com/priyans619/DeFi--App
+   ```
+
+2. Change directory to the project directory
+
+    ```shell
+    cd DeFi--App
+    ```
+
+3. Install the dependencies
+   
+     ```shell
+     npm install
+      ```
+4. Run the app
+   
+    ```shell
+    npm run dev
+    ```
+
+ Project will be running in the browser.
+
+ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+ ## **Thanks !!**
