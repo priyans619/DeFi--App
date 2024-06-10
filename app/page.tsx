@@ -8,7 +8,7 @@ const Home: React.FC = () => {
     <div className="relative min-h-screen bg-violet-100">
       <Navbar />
       <div className="pt-16 flex flex-col items-center min-h-screen py-2">
-        <div className="flex flex-row w-full justify-center space-x-10">
+        <div className="flex flex-row w-full justify-center space-x-16">
           <CryptoPriceChart />
           <TokenSwap />
         </div>
