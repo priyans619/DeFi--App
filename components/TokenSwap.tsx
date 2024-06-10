@@ -30,6 +30,29 @@ const TokenSwap: React.FC = () => {
         throw new Error('Please install MetaMask!');
       }
 
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      await provider.send('eth_requestAccounts', []);
+      const signer = provider.getSigner();
+
+      const response = await axios.get(`https://api.0x.org/swap/v1/quote`, {
+        params: {
+          sellToken: fromToken,
+          buyToken: toToken,
+          sellAmount: ethers.utils.parseUnits(amount, 18).toString(),
+        },
+      });
+
+      const txParams = {
+        to: response.data.to,
+        data: response.data.data,
+        value: response.data.value,
+        gasPrice: response.data.gasPrice,
+        gas: response.data.gas,
+      };
+
+      const tx = await signer.sendTransaction(txParams);
+      await tx.wait();
+      alert('Swap Successful!');
     } catch (error) {
       console.error('Error performing swap:', error);
       alert('Error performing swap. Please try again.');
