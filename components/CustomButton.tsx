@@ -11,7 +11,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({ btnType, title, handleClick
   return (
     <button
       type={btnType}
-      className={`font-epilogue font-semibold text-[16px] leading-[26px] text-white min-h-[52px] px-4 rounded-[200px] ${styles}`}
+      className={`font-epilogue font-semibold text-[16px] leading-[26px] text-white min-h-[42px] px-3 rounded-[200px] ${styles} hover:bg-violet-500 transition duration-300 ease-in-out`}
       onClick={handleClick}
     >
       {title}
