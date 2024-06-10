@@ -60,8 +60,8 @@ const TokenSwap: React.FC = () => {
   };
 
   return (
-    <div className="p-4 bg-white rounded-lg shadow-lg">
-      <h2 className="text-xl font-semibold mb-4">Token Swap</h2>
+    <div className="px-4 bg-white rounded-lg shadow-lg ">
+      <h2 className="text-2xl font-bold mb-6">Token Swap</h2>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">From Token</label>
         <input
