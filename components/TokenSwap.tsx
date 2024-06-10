@@ -24,7 +24,17 @@ const TokenSwap: React.FC = () => {
     }
   };
 
-  
+  const performSwap = async () => {
+    try {
+      if (!window.ethereum) {
+        throw new Error('Please install MetaMask!');
+      }
+
+    } catch (error) {
+      console.error('Error performing swap:', error);
+      alert('Error performing swap. Please try again.');
+    }
+  };
 
   return (
     <div className="p-4 bg-white rounded-lg shadow-lg">
